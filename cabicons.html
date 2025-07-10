@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CABICONS - Formation & Conseil en Affaires</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .hero-gradient {
+            background-image: url("page-heading-bg.jpg");
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+        .testimonial-card:hover {
+            transform: scale(1.03);
+        }
+        .nav-link {
+            position: relative;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #3b82f6;
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .animate-bounce-slow {
+            animation: bounce-slow 3s infinite;
+        }
+        @keyframes bounce-slow {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800">
+    <!-- Header/Navigation -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <div class="bg-blue-600 text-white p-2 rounded-lg mr-3">
+                    <i class="fas fa-business-time text-2xl"></i>
+                </div>
+                <h1 class="text-xl font-bold text-blue-800">CABICONS</h1>
+            </div>
+            
+            <nav class="hidden md:flex space-x-8">
+                <a href="index.html" class="nav-link text-blue-800 font-medium">Accueil</a>
+                <a href="cabicons.html" class="nav-link text-gray-600 hover:text-blue-800 font-medium">Cabicons</a>
+                <a href="contact.html" class="nav-link text-gray-600 hover:text-blue-800 font-medium">Contact</a>
+            </nav>
+            
+            <button class="md:hidden text-gray-600" id="mobile-menu-button">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div class="md:hidden hidden bg-white w-full py-4 px-4 shadow-md" id="mobile-menu">
+            <div class="flex flex-col space-y-4">
+                <a href="index.html" class="text-blue-800 font-medium">Accueil</a>
+                <a href="cabicons.html" class="text-gray-600 hover:text-blue-800 font-medium">Cabicons</a>
+                <a href="contact.html" class="text-gray-600 hover:text-blue-800 font-medium">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="accueil" class="hero-gradient text-white py-20 md:py-32">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">Expertise en Conseil et Formation en Entreprise</h1>
+                <p class="text-xl mb-8 opacity-90">Formez-vous, communiquez et gérez : des savoir-faire essentiels pour votre avenir professionnel.</p>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <img src="Tabloide.jpg" alt="Business meeting" class="rounded-xl shadow-2xl w-full max-w-lg animate-bounce-slow">
+            </div>
+        </div>
+    </section>
+
+        <!-- Training Programs Section -->
+    <section id="formations" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-blue-800 mb-4">Les offres de CABICONS</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">Les activités de CABICONS sont bâties sur quatre (04) pôles</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Formation 1 -->
+                <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+
+                    <div class="p-6">
+                        <img src="service_02.jpg">
+                        <h3 class="text-xl font-bold text-blue-800 mb-3">LES ETUDES </h3>
+                        <p class="text-gray-600 mb-4">Dans sa vocation de conseil, CABICONS a developpé l'offre du pôle N°1 constituée des études d'ordre commercial et Marketing et d'ordre de faisabilité.</p>
+
+                    </div>
+                </div>
+                
+                <!-- Formation 2 -->
+                <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+
+                    <div class="p-6">
+                        <img src="formation-pro.jpeg">
+                        <h3 class="text-xl font-bold text-blue-800 mb-3">LES FORMATIONS DE COMPETENCE </h3>
+                        <p class="text-gray-600 mb-4">Les formations aux métiers de compétence apportent aux apprenants, une performance au poste d'emploi et au perfectionnement, mais y a aussi les formations sur le genre.</p>
+
+                    </div>
+                </div>
+                
+                <!-- Formation 3 -->
+                <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+
+                    <div class="p-6">
+                        <img src="conseil-assistance.jpg">
+                        <h3 class="text-xl font-bold text-blue-800 mb-3">LES SERVICES DE CONSEIL ET ASSISTANCE </h3>
+                        <p class="text-gray-600 mb-4">Nous conseillons sur : les recherches des sources de financement, les recherches des partenaires.
+                        Et nous assistons en création d'entreprise et en négociations devant les Banques ou un Bailleur de fonds</p>
+                    </div>
+                </div>
+
+                <!-- Formation 4 -->
+                <div class="bg-gray-50 rounded-xl shadow-md overflow-hidden hover:shadow-lg transition duration-300">
+
+                    <div class="p-6">
+                        <img src="Communication.jpg">
+                        <h3 class="text-xl font-bold text-blue-800 mb-3">LES SUPPORTS DE COMMUNICATION </h3>
+                        <p class="text-gray-600 mb-4">Les supports de communication permettent de renforcer les activités de l'entreprise afin de faire connaitre les produits auprès des clients.</p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Bootstrap Services Tabs Section -->
+    <section class="py-20 bg-gray-100">
+        <div class="container">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-blue-800 mb-4">Nos Services en Détail</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-2xl mx-auto">Découvrez nos services phares à travers une présentation complète et visuelle.</p>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <ul class="nav nav-tabs justify-center border-0" id="servicesTab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="formation-tab" data-bs-toggle="tab" data-bs-target="#formation" type="button" role="tab">
+                                <i class="fas fa-graduation-cap me-2"></i> Études
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="communication-tab" data-bs-toggle="tab" data-bs-target="#communication" type="button" role="tab">
+                                <i class="fas fa-comments me-2"></i> Formations de compétences
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="conseil-tab" data-bs-toggle="tab" data-bs-target="#conseil" type="button" role="tab">
+                                <i class="fas fa-chart-line me-2"></i> Conseil & Assistance
+                            </button>
+                        </li>
+                            <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="supports-tab" data-bs-toggle="tab" data-bs-target="#supports" type="button" role="tab">
+                                <i class="fas fa-bullhorn -line me-2"></i> Supports de communication
+                            </button>
+                        </li>
+                    </ul>
+
+                    <div class="tab-content bg-white p-6 rounded-b-lg shadow-lg" id="servicesTabContent">
+                        <!-- Formations Tab -->
+                        <div class="tab-pane fade show active" id="formation" role="tabpanel">
+                            <div class="row align-items-center">
+                                <div class="col-md-6">
+                                    <img src="single_service_01.jpg"
+                                         alt="Formation en entreprise" class="img-fluid rounded-lg object-fit: cover;">
+                                </div>
+                                <div class="col-md-6">
+                                    <h3 class="text-2xl font-bold text-blue-800 mb-4">Les Études Commerciales et Marketing</h3>
+                                                   <h4>Ces études d'offres sont les suivantes :</h4>
+                                    <p class="text-gray-600 mb-4">- Études sur la publicité
+                                    <br>- Études sur la promotion
+                                    <br>- Études sur l'organisation des événements
+                                    <br>- Le plan commercial
+                                    <br>- Études de marché
+                                    <br>- Études du Marketing du Produit
+                                    <br>- Études de concurrence
+                                    <br>- Études de fidélisation
+                                    <br>- Études d'opinion des consommateurs
+                                    <br>- Le plan Marketing
+                                    <br>- La prospection des clients
+                                    <br>- Le plan de Gestion de la clientèle</p>
+                                    
+                                    <h3 class="text-2xl font-bold text-blue-800 mb-4">Les Etudes de faisabilité d'Affaires</h3>
+                                  
+                                    <p>Ces études d'offres sont les suivantes :
+                                    <br>- Études de faisabilité
+                                    <br>- Études de relance d'une activité ou d'une entreprise
+                                    <br>- Le plan d'affaire
+                                    <br>- Le plan de formation</p>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Communication Tab -->
+                        <div class="tab-pane fade" id="communication" role="tabpanel">
+                            <div class="row align-items-center">
+                                <div class="col-md-6 order-md-2">
+                                    <img src="FormationPro.jpg" 
+                                         alt="Communication d'entreprise" class="img-fluid rounded-lg">
+                                </div>
+                                <div class="col-md-6 order-md-1">
+                                    <h3 class="text-2xl font-bold text-blue-800 mb-4">Les Domaines de compétence</h3>
+                                <h4>Ces formations sont classées par domaine :</h4>
+                             
+                                <p class="text-gray-600 mb-4">- COMMERCIAL
+                                <br>- MARKETING
+                                <br>- COMMUNICATION
+                                <br>- ACHAT
+                                <br>- LOGISTIQUE
+                                <br>- ASSISTANTES POLYVALENTES
+                                <br>- CRÉATION ET GESTION D'ENTREPRISE
+                                <br>- ASSURANCES ET BANQUES
+                                <br>- FORMATION DE PERFECTIONNEMENT EN ADMINISTRATION
+                                <br>- RESSOURCES HUMAINES</p>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Conseil Tab -->
+                        <div class="tab-pane fade" id="conseil" role="tabpanel">
+                            <div class="row align-items-center">
+                                <div class="col-md-6">
+                                    <img src="single_service_03.jpg" 
+                                         alt="Conseil en entreprise" class="img-fluid rounded-lg">
+                                </div>
+                                <div class="col-md-6">
+                                    <h3 class="text-2xl font-bold text-blue-800 mb-4">Conseil</h3>
+                                    <p class="text-gray-600 mb-4">- Recherche des sources de financement
+                                    <br>- Recherche des partenaires</p>
+
+                                </div>
+                            </div>
+                        </div>
+
+                                                <!-- Support Tab -->
+                        <div class="tab-pane fade" id="supports" role="tabpanel">
+                            <div class="row align-items-center">
+                                <div class="col-md-6">
+                                    <img src="supports-impression-print.jpg" 
+                                         alt="Conseil en entreprise" class="img-fluid rounded-lg">
+                                </div>
+                                <div class="col-md-6">
+                                <h3 class="text-2xl font-bold text-blue-800 mb-4">Les supports de communication</h3>
+                                <h4>CABICONS réalise les supports suivants :</h4>
+                                <p class="text-gray-600 mb-4">- Calendriers
+                                <br>- Catalogues
+                                <br>- Flyers
+                                <br>- Dépliants
+                                <br>- Journal Annonce
+                                <br>- Etc.</p></p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="apropos" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-12 lg:mb-0 lg:pr-12">
+                    <h2 class="text-3xl font-bold text-blue-800 mb-6">À propos de CABICONS</h2>
+                    <div class="w-20 h-1 bg-blue-600 mb-6"></div>
+                    <p class="text-gray-600 mb-6">
+                    Avec une expérience et sa compétence solide et approuvée, <strong>CABICONS</strong> délivre une gamme de services pour 
+                    des solutions appropriés impactant sur l'action de l'entreprise, du gouvernement , des organisations 
+                    nationales et internationales.
+                    </p>
+                    <p class="text-gray-600 mb-6">
+                    CABICONS a pour vocation de fournir un conseil et une assistance étayés et pertinents aux chefs 
+                    d'entreprise, aux hommes d'affaires, aux promoteurs, dans la mesure de leurs attentes dans les 
+                    domaines de leurs actions.
+                    </p>
+                    <p class="text-gray-600 mb-6">
+                    Il est donc un partenaire technique indéniable qui conseilles et assiste dans l'éfficacité de la 
+                    réussite de l'entreprise, de l'activité de l'entreprise, du projet d'affaires et du projet de 
+                    developpement.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-check text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-blue-800 mb-1">Plus de 20 ans d'expérience</h4>
+                                <p class="text-gray-600">Un savoir-faire éprouvé au service de vos projets</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-check text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-blue-800 mb-1">Approche sur mesure</h4>
+                                <p class="text-gray-600">Des solutions adaptées à vos besoins spécifiques</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-check text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-blue-800 mb-1">Résultats tangibles</h4>
+                                <p class="text-gray-600">Une amélioration mesurable de vos performances</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2">
+                    <div class="bg-white p-8 rounded-xl shadow-lg">
+                        <h3 class="text-2xl font-bold text-blue-800 mb-6">Notre Mission</h3>
+                        <p class="text-gray-600 mb-6">
+                            Soutenir les apprenants et les entreprises en leur transmettant les compétences et les ressources indispensables pour 
+                            évoluer et réussir dans un environnement en perpétuelle transformation.
+                        </p>
+                        <div class="flex items-center mb-6">
+                            <div class="bg-blue-100 p-4 rounded-full mr-4">
+                                <i class="fas fa-eye text-blue-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-blue-800">Vision</h4>
+                                <p class="text-gray-600">Devenir le partenaire privilégié des entreprises en matière de développement des compétences 
+                                    et d'optimisation organisationnelle.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="bg-blue-100 p-4 rounded-full mr-4">
+                                <i class="fas fa-star text-blue-600 text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-blue-800">Valeurs</h4>
+                                <p class="text-gray-600">Excellence, Innovation, Intégrité, Collaboration et Engagement.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Members Section -->
+            <div class="mt-20">
+                <h3 class="text-2xl font-bold text-blue-800 mb-8 text-center">Notre Équipe d'Experts</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Member 1 -->
+                    <div class="bg-white p-6 rounded-xl shadow-md text-center">
+                        <div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-blue-100">
+                            <img src="Mak.jpg" alt="Team member" class="w-full h-full object-cover">
+                        </div>
+                        <h4 class="text-xl font-bold text-blue-800 mb-2">MAKAYA Athanase</h4>
+                        <p class="text-blue-600 font-medium mb-2">DIRECTEUR MANAGER</p>
+                        <p class="text-gray-600">Directeur Manager de CABICONS, garant de la vision stratégique, de la gestion opérationnelle et du développement global de l’entreprise.</p>
+                    </div>
+
+                    <!-- Member 2 -->
+                    <div class="bg-white p-6 rounded-xl shadow-md text-center">
+                        <div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-blue-100">
+                            <img src="Monika.jpg" alt="Team member" class="w-full h-full object-cover">
+                        </div>
+                        <h4 class="text-xl font-bold text-blue-800 mb-2">KINKONDA Monika-Gervais</h4>
+                        <p class="text-blue-600 font-medium mb-2">ATTACHÉE  DE GESTION</p>
+                        <p class="text-gray-600">Spécialiste de la gestion administrative, budgétaire et opérationnelle au sein de l’entreprise.</p>
+                    </div>
+
+                    <!-- Member 3 -->
+                    <div class="bg-white p-6 rounded-xl shadow-md text-center">
+                        <div class="w-32 h-32 mx-auto mb-4 rounded-full overflow-hidden border-4 border-blue-100">
+                            <img src="Moi.jpg" alt="Team member" class="w-full h-full object-cover">
+                        </div>
+                        <h4 class="text-xl font-bold text-blue-800 mb-2">SALABANZI Claudyce Corneille</h4>
+                        <p class="text-blue-600 font-medium mb-2">ATTACHÉE  TECHNIQUE</p>
+                        <p class="text-gray-600">Spécialiste de l’assistance technique, du suivi opérationnel et du soutien logistique aux projets et services techniques.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="bg-blue-600 text-white p-2 rounded-lg mr-3">
+                            <i class="fas fa-business-time"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">CABICONS</h3>
+                    </div>
+                    <p class="text-blue-200 mb-4">
+                        Votre partenaire en formation, communication et conseil en affaires pour le développement de votre entreprise.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Contact</h4>
+                    <address class="not-italic text-blue-200">
+                        <p class="mb-2">EX Télé Congo</p>
+                        <p class="mb-2">En face du Ministère de la Communication et des Médias - Brazzaville, CONGO</p>
+                        <p class="mb-2">Tél: +242 05 324 0289</p>
+                        <p class="mb-2">Tél: +242 06 708 0616</p>
+                        <p>Email: mcabiconsconseils@gmail.com</p>
+                    </address>
+                </div>
+            </div>
+            
+            <div class="border-t border-blue-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-blue-200 mb-4 md:mb-0">
+                    &copy; 2025 CABICONS. Tous droits réservés.
+                </p>
+                <div class="flex space-x-6" overflow: hidden>
+                    <a href="#" class="text-blue-200 hover:text-white">Mentions légales</a>
+                    <a href="#" class="text-blue-200 hover:text-white">Politique de confidentialité</a>
+                    <a href="#" class="text-blue-200 hover:text-white">Conditions générales</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Back to top button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-blue-600 text-white p-3 rounded-full shadow-lg opacity-0 invisible transition-all duration-300 hover:bg-blue-700">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+        <script src="java.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    </body>
+</html>
